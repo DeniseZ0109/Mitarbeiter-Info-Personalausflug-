@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letzte Infos – Personaltag 2. September 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #1a2e4a;
+    --mid:     #2d4e73;
+    --steel:   #4a7094;
+    --water:   #7fb3d3;
+    --foam:    #d4eaf7;
+    --cream:   #f7f4ef;
+    --sand:    #e8e0d2;
+    --warm:    #c9b99a;
+    --text:    #1a1a1a;
+    --muted:   #6b6560;
+    --green:   #3d6b3f;
+    --green-bg:#e8f2e8;
+    --amber:   #7a4f1a;
+    --amber-bg:#f5ead8;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero { background: var(--navy); position: relative; overflow: hidden; }
+
+  .hero-waves {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 120px; opacity: 0.12;
+  }
+
+  .hero-inner {
+    position: relative; z-index: 1; max-width: 720px; margin: 0 auto;
+    padding: 56px 32px 76px; text-align: center;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--water); margin-bottom: 24px;
+  }
+
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; width: 28px; height: 1px;
+    background: var(--water); opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 5.5vw, 52px);
+    font-weight: 400; color: #fff; line-height: 1.15;
+    margin-bottom: 14px; letter-spacing: -0.01em;
+  }
+
+  .hero h1 em { font-style: italic; color: var(--water); }
+
+  .hero-date {
+    font-size: 15px; color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-date strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── INTRO ── */
+  .intro-block {
+    background: #fff; border-radius: 16px; padding: 36px 40px;
+    margin-top: -28px; position: relative; z-index: 2;
+    box-shadow: 0 4px 24px rgba(26,46,74,0.08);
+  }
+
+  .intro-block p { font-size: 16px; line-height: 1.8; color: var(--muted); }
+  .intro-block p strong { color: var(--text); font-weight: 600; }
+
+  /* ── SECTION HEADERS ── */
+  .section-eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--steel);
+    margin: 52px 0 18px; display: flex; align-items: center; gap: 12px;
+  }
+
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--sand); }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    background: var(--foam); border-left: 3px solid var(--steel);
+    border-radius: 0 10px 10px 0; padding: 18px 22px;
+    font-size: 14.5px; color: var(--mid); line-height: 1.7;
+  }
+
+  .info-box strong { color: var(--navy); }
+
+  /* ── TREFFPUNKT GRID ── */
+  .meet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  @media (max-width: 480px) { .meet-grid { grid-template-columns: 1fr; } }
+
+  .meet-card {
+    background: #fff; border: 1px solid var(--sand); border-radius: 12px;
+    padding: 22px; text-align: center;
+  }
+
+  .meet-icon { font-size: 26px; margin-bottom: 10px; }
+
+  .meet-card h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600;
+    color: var(--navy); margin-bottom: 6px;
+  }
+
+  .meet-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+
+  .meet-note {
+    display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 500;
+    background: var(--foam); color: var(--mid); padding: 4px 12px; border-radius: 20px;
+  }
+
+  .meet-sub-label {
+    font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600;
+    color: var(--navy); margin: 22px 0 12px;
+  }
+
+  .meet-sub-label:first-of-type { margin-top: 0; }
+
+  .meet-link {
+    display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 500;
+    background: rgba(26,46,74,0.08); color: var(--navy); padding: 4px 12px;
+    border-radius: 20px; text-decoration: none;
+  }
+
+  .meet-link:hover { background: rgba(26,46,74,0.14); }
+
+  /* ── CHECKLIST CARD ── */
+  .check-card {
+    background: #fff; border: 1px solid var(--sand); border-radius: 12px;
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+
+  .check-card h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600;
+    color: var(--navy); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+
+  .check-list { list-style: none; }
+
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--muted); line-height: 1.6;
+    padding: 7px 0; border-top: 1px solid var(--sand);
+  }
+
+  .check-list li:first-child { border-top: none; }
+
+  .check-mark {
+    flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
+    background: var(--green-bg); color: var(--green); font-size: 11px;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+
+  .check-mark.optional { background: var(--amber-bg); color: var(--amber); }
+
+  .badge-optional {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--amber); background: var(--amber-bg);
+    padding: 2px 8px; border-radius: 20px; margin-left: 4px;
+  }
+
+  /* ── DEPOT STEPS ── */
+  .depot-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .depot-item {
+    display: grid; grid-template-columns: 30px 1fr; gap: 14px;
+    align-items: flex-start; background: #fff; border: 1px solid var(--sand);
+    border-radius: 12px; padding: 16px 20px;
+  }
+
+  .depot-num {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--navy);
+    color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 15px;
+    font-weight: 600; display: flex; align-items: center; justify-content: center;
+  }
+
+  .depot-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .depot-item p strong { color: var(--text); }
+
+  /* ── LUNCH BLOCK ── */
+  .lunch-block {
+    background: var(--green-bg); border-radius: 12px; padding: 22px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+
+  .lunch-icon { font-size: 30px; flex-shrink: 0; }
+  .lunch-block p { font-size: 14.5px; color: var(--green); line-height: 1.7; }
+  .lunch-block p strong { color: var(--navy); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 32px 24px; font-size: 12px; color: var(--warm);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .intro-block { padding: 26px 22px; margin-top: -18px; }
+    .hero-inner { padding: 44px 22px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="hero-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,120 L0,120 Z" fill="#7fb3d3"/>
+    <path d="M0,80 C300,40 600,100 900,70 C1100,50 1300,90 1440,75 L1440,120 L0,120 Z" fill="#4a7094" opacity="0.5"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Kurz vor dem Start</div>
+    <h1>Bald geht's <em>los</em></h1>
+    <p class="hero-date"><strong>Mittwoch, 2. September 2026</strong> &nbsp;·&nbsp; Museum Neuthal &amp; Lützelau</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>Liebe Mitarbeitende<br><br>
+    Bald ist es so weit – unser Personaltag steht vor der Tür. Damit alle entspannt starten können und niemand unterwegs improvisieren muss, haben wir die <strong>wichtigsten Infos</strong> noch einmal kurz und unkompliziert für euch zusammengestellt.</p>
+  </div>
+
+  <!-- ZVV -->
+  <div class="section-eyebrow">ZVV-Billette</div>
+  <div class="info-box">
+    Ihr habt eure ZVV-Billette bereits von euren Vorgesetzten erhalten. <strong>Bitte am Bahnhof entwerten, bevor wir losfahren</strong> – dann sind wir alle startklar.
+  </div>
+
+  <!-- TREFFPUNKTE -->
+  <div class="section-eyebrow">Treffpunkte</div>
+
+  <div class="meet-sub-label">1. Treffpunkt</div>
+  <div class="meet-grid">
+    <div class="meet-card">
+      <div class="meet-icon">🚆</div>
+      <h4>Bahnhof Wald</h4>
+      <p>07:40 Uhr Treffpunkt, Weiterfahrt ins <strong>Museum Neuthal</strong>.</p>
+      <a href="https://www.sbb.ch/de?stops=Wald+ZH_I8503138~Neuthal_I8503133&day=2026-09-02&time=07_17&moment=dep&trip=0_1" target="_blank" class="meet-link">🚆 Verbindung SBB</a>
+    </div>
+    <div class="meet-card">
+      <div class="meet-icon">🚌</div>
+      <h4>Bahnhof Wetzikon</h4>
+      <p>07:40 Uhr Treffpunkt, Weiterfahrt ins <strong>Museum Neuthal</strong>.</p>
+      <a href="https://www.sbb.ch/de?stops=Wald+ZH_I8503138~Neuthal_I8503133&day=2026-09-02&time=07_17&moment=dep&trip=0_1" target="_blank" class="meet-link">🚌 Verbindung SBB</a>
+    </div>
+  </div>
+
+  <div class="meet-sub-label">2. Treffpunkt</div>
+  <div class="meet-grid">
+    <div class="meet-card">
+      <div class="meet-icon">⛵</div>
+      <h4>Gruppe Shuttle</h4>
+      <p>12:15 Uhr Treffpunkt beim <strong>Hafen Rapperswil</strong>.</p>
+      <a href="https://www.google.com/maps/place/Hafen+Rapperswil/@47.225807,8.8147827,702m/data=!3m1!1e3!4m6!3m5!1s0x479ab6e079c1bdff:0xf48e81b9c639c93d!8m2!3d47.2258066!4d8.8139968!16s%2Fg%2F1th862gr?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="meet-link">📍 Hafen Rapperswil</a>
+    </div>
+    <div class="meet-card">
+      <div class="meet-icon">🐉</div>
+      <h4>Gruppe Drachenboot</h4>
+      <p>Bei Ankunft am <strong>Bahnhof Rapperswil</strong>, Weitermarsch zum <strong>Kanuclub Rapperswil</strong>.</p>
+    </div>
+  </div>
+
+  <!-- SNACK -->
+  <div class="section-eyebrow">Weiterfahrt / Snack</div>
+  <div class="lunch-block">
+    <div class="lunch-icon">🥪</div>
+    <p>Für unterwegs gibt's einen kleinen <strong>Snack</strong>, damit <strong>niemand hungrig paddeln, spazieren oder shutteln</strong> muss.</p>
+  </div>
+
+  <!-- DRACHENBOOT -->
+  <div class="section-eyebrow">Hinweise für die Drachenboot-Gruppe</div>
+
+  <div class="check-card">
+    <h4>🎒 Ausrüstung</h4>
+    <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">Für den Start beim Kanuklub bitte mitnehmen:</p>
+    <ul class="check-list">
+      <li><span class="check-mark">✓</span> Kleidung zum Rudern (kurze Hosen, T-Shirt)</li>
+      <li><span class="check-mark optional">i</span> Flipflops <span class="badge-optional">Optional</span> – aber praktisch, falls's nass wird</li>
+      <li><span class="check-mark optional">i</span> Jacke oder Pullover <span class="badge-optional">Empfohlen</span> – auf dem Wasser kann's frischer sein</li>
+    </ul>
+  </div>
+
+  <div class="check-card" style="margin-bottom: 0;">
+    <h4>🧳 Depotmöglichkeiten</h4>
+    <div class="depot-list">
+      <div class="depot-item">
+        <div class="depot-num">1</div>
+        <p>Eure <strong>Kleider und Rucksäcke</strong> könnt ihr bequem beim Kanuklub deponieren.</p>
+      </div>
+      <div class="depot-item">
+        <div class="depot-num">2</div>
+        <p>Falls ihr einen kleinen Rucksack habt, könnt ihr ihn auch <strong>einem Arbeitskollegen mitgeben</strong>, der mit dem Shuttle auf die Insel fährt.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Personaltag 2. September 2026 &nbsp;·&nbsp; Gemeinde Wald &nbsp;·&nbsp; Wir freuen uns auf euch!
+</footer>
+
+</body>
+</html>
